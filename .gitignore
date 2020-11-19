@@ -3,3 +3,6 @@ bin/gaurun_client
 bin/gaurun_recover
 bin/darwin
 bin/linux
+
+APNS-Certificates/*
+.DS_Store
