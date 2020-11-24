@@ -17,8 +17,8 @@ keepalive_conns = 4
 retry_max = 1
 
 [ios]
-pem_cert_path = "cert.pem"
-pem_key_path = "key.pem"
+pem_cert_path = "certificates/voip_cert.pem"
+pem_key_path = "certificates/voip_pub_key.pem"
 sandbox = true
 enabled = true
 timeout = 5

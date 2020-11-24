@@ -12,6 +12,10 @@ RUN apk add --no-cache ca-certificates tzdata &&\
 COPY --from=build-env /opt/gaurun/cmd/gaurun/gaurun /app/
 COPY --from=build-env /opt/gaurun/cmd/gaurun_recover/gaurun_recover /app/
 COPY ./conf/gaurun.toml /app/conf/gaurun.toml
+
+# APNSの証明書は、APNS-Certificatesフォルダ内に配置する！！
+COPY ./APNS-Certificates/voip_cert.pem ./APNS-Certificates/voip_pub_key.pem /app/certificates/
+
 USER gaurun
 WORKDIR /app
 EXPOSE 1056
