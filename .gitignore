@@ -6,3 +6,4 @@ bin/linux
 
 APNS-Certificates/*
 .DS_Store
+gaurun.toml
