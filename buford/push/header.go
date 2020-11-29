@@ -39,6 +39,7 @@ type PushType string
 const (
 	PushTypeAlert      PushType = "alert"
 	PushTypeBackground PushType = "background"
+	PushTypeVoIP       PushType = "voip"
 )
 
 // set headers for an HTTP request

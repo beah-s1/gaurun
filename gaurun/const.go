@@ -19,4 +19,5 @@ const (
 const (
 	ApnsPushTypeAlert      = "alert"
 	ApnsPushTypeBackground = "background"
+	ApnsPushTypeVoIP       = "voip"
 )

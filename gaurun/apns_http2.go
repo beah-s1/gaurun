@@ -158,7 +158,9 @@ func NewApnsHeadersHttp2(req *RequestGaurunNotification) *push.Headers {
 	// cf: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns
 	if req.PushType == ApnsPushTypeBackground {
 		pushType = push.PushTypeBackground
-	} else {
+	} else if req.PushType == ApnsPushTypeVoIP {
+		pushType = push.PushTypeVoIP
+    } else {
 		pushType = push.PushTypeAlert
 	}
 
