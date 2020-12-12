@@ -176,8 +176,8 @@ func validateNotification(notification *RequestGaurunNotification) error {
 	}
 
 	if notification.PushType != "" {
-		if notification.PushType != ApnsPushTypeAlert && notification.PushType != ApnsPushTypeBackground {
-			return fmt.Errorf("push_type must be %s or %s", ApnsPushTypeAlert, ApnsPushTypeBackground)
+		if notification.PushType != ApnsPushTypeAlert && notification.PushType != ApnsPushTypeBackground && notification.PushType != ApnsPushTypeVoIP {
+			return fmt.Errorf("push_type must be %s, %s or %s", ApnsPushTypeAlert, ApnsPushTypeBackground, ApnsPushTypeVoIP)
 		}
 	}
 
